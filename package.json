@@ -1,0 +1,25 @@
+{
+  "name": "mini-project-1",
+  "version": "1.0.0",
+  "description": "a mini blog web app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmw395/Mini-Project-1.git"
+  },
+  "author": "Risa Walles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rmw395/Mini-Project-1/issues"
+  },
+  "homepage": "https://github.com/rmw395/Mini-Project-1#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
+  }
+}
