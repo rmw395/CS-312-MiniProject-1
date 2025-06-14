@@ -9,15 +9,21 @@
 
 <body>
     <h1>Blog Site</h1>
+    <h2>Make a Post</h2>
     <form action="/submit" method="POST">
-        <label for="name">Your Name:</label>
-        <input type="text" name="name" required>
-        <label for="title">Post Title:</label>
-        <input type="text" name="title" required>
         <label for="content">Write your post:</label>
         <input type="text" name="content" required>
         <input type="submit" value="Submit">
     </form>
+
+    <h2>Browse Posts</h2>
+    <% if (locals.posts) { %>
+        <%= posts.forEach(element => {
+            <li>
+                <%= element %>
+            </li>
+        }); %>
+    <% } %>
 </body>
 
 </html>

@@ -16,11 +16,12 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-    console.log(__dirname + "/public/index.html");
-    res.sendFile(__dirname + "/public/index.html");
+    res.render("index.ejs");
 });
 
 app.post("/submit", (req, res) => {
-    console.log(req.body);
-    res.sendStatus(201);
+    const post = req.form;
+    res.render("index.ejs", {
+        newPost: post,
+      });
 });
