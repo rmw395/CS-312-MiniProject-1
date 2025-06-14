@@ -18,6 +18,7 @@
 
     <h2>Browse Posts</h2>
     <% if (locals.posts) { %>
+        <% posts.push(newPost); %>
         <%= posts.forEach(element => {
             <li>
                 <%= element %>
