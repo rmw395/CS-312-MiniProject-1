@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<h2>Make a Post</h2>
+<form action="/submit" method="POST">
+    <label for="author">Your name:</label>
+    <input type="text" name="author" required>
+    <label for="title">Post title:</label>
+    <input type="text" name="title" required>
+    <label for="content">Write your post:</label>
+    <input type="text" name="content" required>
+    <input type="submit" value="Submit">
+</form>
+
+<%- include("partials/footer.ejs") %>
