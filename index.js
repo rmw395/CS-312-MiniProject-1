@@ -27,7 +27,10 @@ app.get("/create", (req, res) => {
 });
 
 app.get("/edit/:id", (req, res) => {
-    // ah
+    const postId = req.params.id;
+    const postToEdit = posts[postId];
+
+    res.render("create.ejs", {postToEdit, postId});
 });
 
 app.post("/submit", (req, res) => {
@@ -56,5 +59,7 @@ app.post("/edit/:id", (req, res) => {
 });
 
 app.post("/delete/:id", (req, res) => {
-    // ahhh
+    posts.splice(req.params.id, 1);
+
+    res.redirect("/");
 });
