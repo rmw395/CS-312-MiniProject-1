@@ -3,14 +3,15 @@ import express from "express";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
-app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(morgan("tiny"));
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
 const app = express();
 const port = 3000;
+
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(morgan("tiny"));
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 let posts = [];
 
@@ -34,9 +35,9 @@ app.get("/edit/:id", (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
-    const postAuthor = req.form['author'];
-    const postTitle = req.form['title'];
-    const postContent = req.form['content'];
+    const postAuthor = req.body['author'];
+    const postTitle = req.body['title'];
+    const postContent = req.body['content'];
     const newPost = {
         pAuthor: postAuthor,
         pTitle: postTitle,
