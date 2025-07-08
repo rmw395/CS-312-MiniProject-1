@@ -1,2 +1,4 @@
-# Mini-Project-1
-Mini-Project 1 for CS 312 - Blog Web Application Using Node.js, Express.js, and EJS
+# Mini-Project-4
+Mini-Project 4 for CS 312 - FrontEnd Integration to Blog Application
+
+Built off of Mini-Project 1, so there's no real backend.
